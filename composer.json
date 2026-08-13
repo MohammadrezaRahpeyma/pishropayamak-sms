@@ -1,0 +1,47 @@
+{
+    "name": "pishropayamak/sms",
+    "description": "پکیج رسمی ارسال پیامک پیشرو پیامک برای لاراول - پشتیبانی کامل از REST API v3",
+    "keywords": ["sms", "pishropayamak", "پیشرو پیامک", "laravel", "sms-service", "rest-api"],
+    "homepage": "https://pishropayamak.ir",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "پیشرو پیامک",
+            "email": "info@pishropayamak.ir",
+            "homepage": "https://pishropayamak.ir"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PishroPayamak\\Sms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PishroPayamak\\Sms\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PishroPayamak\\Sms\\PishroPayamakServiceProvider"
+            ],
+            "aliases": {
+                "PishroPayamak": "PishroPayamak\\Sms\\Facades\\PishroPayamak"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
